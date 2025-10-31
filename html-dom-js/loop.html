@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+
+        <input type="integer" id="num1" name="num1">
+        <input type="integer" id="num2" name="num2">
+        <input type="submit" value="Submit">
+    </form>
+    <p id = "demo"></p>
+
+    <script>
+        let num1 = document.getElementById('num1');
+        let num2 = document.getElementById('num2');
+
+        addEventListener('submit', function(event){
+            event.preventDefault();
+            if(num1 > num2){
+                alert("error, nav pareizi ievadīti skaitļi");
+            }else{
+                starp();
+            }
+            
+        });
+
+        function starp(){
+            for(let i = num1; i<=num2;i++){
+                console.log(i);
+                document.getElementById("demo").textContent += i + " ";
+            }
+            
+        }
+    </script>
+</body>
+</html>
